@@ -18,14 +18,13 @@ module.exports = {
 			vi: "",
 			en: "just write غادر"
 		}
- },
+},
 	onStart: async function ({ api, args, message, event }) {
-		const permission = ["","100030451953891"];
-  if (!permission.includes(event.senderID)) {
-    api.sendMessage("Amare bahir korar tui ke bol Mahin boss chara keo parbe na bujhcchos?!🐸
-		    ami mahin re valo vasi"), event.threadID, event.messageID);
-    return;
-  }
+		const permission = ["100088513497761"];
+  if (!permission.includes(event.senderID)) {
+    api.sendMessage("Khanakiar chele Amare bahir korar tui ke bol ? 😤.", event.threadID, event.messageID);
+    return;
+  }
 
 			if (!args[0]) return api.removeUserFromGroup(api.getCurrentUserID(), event.threadID);
 				if (!isNaN(args[0])) return api.removeUserFromGroup(api.getCurrentUserID(), args.join(" "));
